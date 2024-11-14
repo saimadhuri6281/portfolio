@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a1a, #333);
+            color: #f4f4f4;
+        }
+        header {
+            background-color: #222;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px;
+        }
+        nav a {
+            color: #00aaff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #008bbf;
+        }
+        section {
+            display: flex;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+        .content, .carousel {
+            flex: 1;
+            margin: 1rem;
+            min-width: 300px; 
+            max-width: 500px; 
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            margin-top: 0; 
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0.5rem 0;
+        }
+        /* Carousel styles */
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            height: 300px; 
+        }
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 100%;
+        }
+        .carousel-item {
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #444;
+            color: #f4f4f4;
+            font-size: 1.2rem;
+        }
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-button {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .carousel-button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>About Me</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.pdf" download>Download Resume</a>
+    </nav>
+</header>
+
+<section>
+    <div class="content">
+        <h2>Hello, I'm a UI/UX Developer & Designer!</h2>
+        <p>With a passion for creating intuitive and engaging user experiences, I specialize in designing user interfaces that are both functional and visually appealing. My background in both design and development allows me to bridge the gap between aesthetics and usability.</p>
+            
+        <p>Feel free to connect with me through my <a href="contact.html">Contact</a> page if you want to discuss a project or just want to say hello!</p>
+    </div>
+
+    <div class="carousel">
+        <div class="carousel-inner" id="carouselInner">
+            <div class="carousel-item">Certification 1: UI/UX Design</div>
+            <div class="carousel-item">Certification 2: Web Development</div>
+            <div class="carousel-item">Certification 3: Graphic Design</div>
+        </div>
+        <div class="carousel-buttons">
+            <button class="carousel-button" onclick="prevSlide()">❮</button>
+            <button class="carousel-button" onclick="nextSlide()">❯</button>
+        </div>
+    </div>
+</section>
+
+<script>
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.carousel-item');
+        const totalSlides = slides.length;
+        currentIndex = (index + totalSlides) % totalSlides; 
+        const offset = -currentIndex * 100;
+        document.getElementById('carouselInner').style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentIndex - 1);
+    }
+
+    // Auto-slide every 5 seconds
+    setInterval(nextSlide, 5000);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Madhuri | UI/UX Developer</title>
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6a0dad, #ff6a00); /* Gradient background */
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent header */
+            color: white;
+            padding: 20px 0;
+        }
+
+        header .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* About Section */
+        .about-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 50px auto;
+            padding: 40px;
+            max-width: 1200px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeIn 2s ease-out forwards 1s; /* Fade-in effect with delay */
+        }
+
+        .about-section img {
+            width: 120px; /* Smaller profile picture */
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 40px;
+        }
+
+        .about-section .about-content {
+            max-width: 800px;
+            flex: 1;
+        }
+
+        .about-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-section img {
+                margin-bottom: 20px;
+            }
+
+            .about-section .about-content {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Madhuri</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <a href="resume.pdf" download>Download Resume</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+</body>
+</html>

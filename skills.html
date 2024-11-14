@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #ffffff;
+        }
+        .container {
+            padding: 2rem;
+        }
+        header {
+            background-color: lightslategray;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px;
+        }
+        nav a {
+            color: blue;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: blue;
+        }
+        .skill-card {
+            position: relative;
+            width: 100px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        .skill-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+        .progress-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            color: #000;
+            background: conic-gradient(
+                #04df4d 0%, /* Change color for the percentage */
+                #07b60d calc(var(--percentage) * 1%), 
+                #925a5a calc(var(--percentage) * 1%), 
+                #d1c8c8 100%
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px auto 0; /* Center the circle and add margin above */
+        }
+        .skill-title {
+            margin-top: 10px; /* Adjust margin to position title below circle */
+        }
+        h2, h3 {
+            text-align: center;
+        }
+        .skill-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .soft-skill-card {
+            text-align: center;
+            margin: 20px;
+            position: relative;
+            width: 120px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        .soft-skill-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+        
+        .progress-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #4caf50 var(--percentage * 100%), 
+                #e0e0e0 var(--percentage * 100%)
+            );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: black;
+            margin: 10px auto;
+            position: relative;
+        }
+        
+        .progress-circle span {
+            position: relative;
+            font-size: 1.2em;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SKILLS</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.pdf" download>Download Resume</a>
+        </nav>
+    </header>
+   <section id="skills">
+    <div class="container">
+        <h2 class="text-center">Skills</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Developing Skills</h3>
+                <div class="skill-row">
+                    <!-- Skill Card Template -->
+                    <div class="skill-card">
+                        <i class="fab fa-html5 fa-lg" style="color: #e34c26;"></i>
+                        <div class="progress-circle" style="--percentage: 0.90;">
+                            <span>90%</span>
+                        </div>
+                        <h4 class="skill-title">HTML</h4>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-css3-alt fa-lg" style="color: #2965f1;"></i>
+                        <div class="progress-circle" style="--percentage: 0.85;">
+                            <span>85%</span>
+                        </div>
+                        <h4 class="skill-title">CSS</h4>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-js fa-lg" style="color: #f7df1e;"></i>
+                        <div class="progress-circle" style="--percentage: 0.80;">
+                            <span>80%</span>
+                        </div>
+                        <h4 class="skill-title">JavaScript</h4>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-bootstrap fa-lg" style="color: #563d7c;"></i>
+                        <div class="progress-circle" style="--percentage: 0.75;">
+                            <span>75%</span>
+                        </div>
+                        <h4 class="skill-title">Bootstrap</h4>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-react fa-lg" style="color: #61dafb;"></i>
+                        <div class="progress-circle" style="--percentage: 0.70;">
+                            <span>70%</span>
+                        </div>
+                        <h4 class="skill-title">React</h4>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-wordpress fa-lg" style="color: #21759b;"></i>
+                        <div class="progress-circle" style="--percentage: 0.65;">
+                            <span>65%</span>
+                        </div>
+                        <h4 class="skill-title">WordPress</h4>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <h3>Designing Skills</h3>
+                <div class="skill-row">
+                    <div class="skill-card">
+                        <img src="data:image/png;base64,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" height="26px">
+
+                        <div class="progress-circle" style="--percentage: 0.70;">
+                            <span>70%</span>
+                        </div>
+                        <h4 class="skill-title">Photoshop</h4>
+                    </div>
+                    <div class="skill-card">
+                        <img src="data:image/png;base64,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" height="26px">
+                        <div class="progress-circle" style="--percentage: 0.70;">
+                            <span>70%</span>
+                        </div>
+                        <h4 class="skill-title">Figma</h4>
+                    </div>
+                    <div class="skill-card">
+                        <img src="data:image/jpeg;base64,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" height="26px">
+                        <div class="progress-circle" style="--percentage: 0.65;">
+                            <span>65%</span>
+                        </div>
+                        <h4 class="skill-title">Adobe Illustrator</h4>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBRoE5DcalLnKRtZfuKddbpQxE2rGNLe6jXw&s" alt="Figma Icon" style="width: 26px; height: 26px;">
+                        <div class="progress-circle" style="--percentage: 0.75;">
+                            <span>75%</span>
+                        </div>
+                        <h4 class="skill-title">Canva</h4>
+                    </div>         
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <h3>Soft Skills</h3>
+        <div class="skill-row">
+            <div class="soft-skill-card">
+                <i class="fas fa-users fa-lg" style="color: #4caf50;"></i>
+                <div class="progress-circle" style="--percentage: 0.90;">
+                    <span>90%</span>
+                </div>
+                <h4 class="skill-title">Teamwork</h4>
+            </div>
+            <div class="soft-skill-card">
+                <i class="fas fa-comments fa-lg" style="color: #2196F3;"></i>
+                <div class="progress-circle" style="--percentage: 0.85;">
+                    <span>85%</span>
+                </div>
+                <h4 class="skill-title">Communication</h4>
+            </div>
+            <div class="soft-skill-card">
+                <i class="fas fa-lightbulb fa-lg" style="color: #FFC107;"></i>
+                <div class="progress-circle" style="--percentage: 0.80;">
+                    <span>80%</span>
+                </div>
+                <h4 class="skill-title">Leadership</h4>
+            </div>
+            <div class="soft-skill-card">
+                <i class="fas fa-clock fa-lg" style="color: #FF5722;"></i>
+                <div class="progress-circle" style="--percentage: 0.75;">
+                    <span>75%</span>
+                </div>
+                <h4 class="skill-title">Time Management</h4>
+            </div>                   
+        </div>
+    </div>
+    
+    
+</section>
+</body>
+</html>
+
+
