@@ -3,166 +3,367 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Madhuri | UI/UX Developer</title>
-    <!-- Link to Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Madhuri - UI/UX Developer & Designer</title>
     <style>
-        /* Basic Reset */
+        /* General Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e, #16213e); 
-            color: white;
-            min-height: 100vh;
-            overflow-x: hidden;
+            background-color: #001f3d; /* Navy Blue as fallback for non-image support */
+            background-image: url('https://img.freepik.com/free-photo/abstract-uv-ultraviolet-light-composition_23-2149243965.jpg?t=st=1733822248~exp=1733825848~hmac=aa07d7f0be959d0e07215ae3c0e72d9090ea298c1032522bd31198bf24e37773&w=740');
+            background-size: cover; /* Ensure image covers the entire body */
+            background-position: center; /* Position the image in the center */
+            background-attachment: fixed; /* Make the background fixed when scrolling */
+            color: white; /* White text on top of background */
+            line-height: 1.6;
         }
 
-        header {
-            background-color: rgba(0, 0, 0, 0.7); 
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(0, 31, 61, 0.8); /* Slightly darker background to contrast with text */
+        }
+
+        /* Navbar */
+        #navbar {
+            background-color: #003366; /* Darker Navy for Navbar */
             color: white;
             padding: 20px 0;
         }
 
-        header .container {
-            width: 80%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        #navbar .logo {
+            display: inline-block;
+            font-size: 24px;
+            color: #fff;
+            font-weight: 500;
         }
 
-        header nav ul {
+        #navbar nav ul {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #navbar nav ul li {
             list-style: none;
-            display: flex;
-            gap: 20px;
+            margin-left: 20px;
         }
 
-        header nav a {
+        #navbar nav ul li a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 500;
+            text-transform: uppercase;
         }
 
-        header nav a:hover {
-            text-decoration: underline;
+        #navbar nav ul li a:hover {
+            color: #ffcc00; /* Hover color */
         }
 
-        /* About Section */
-        .about-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 50px auto;
-            padding: 40px;
-            max-width: 1200px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            animation: fadeIn 2s ease-out forwards 1s; /* Fade-in effect with delay */
-        }
-
-        .about-section img {
-            width: 120px; /* Smaller profile picture */
-            height: 120px;
-            border-radius: 50%;
-            margin-right: 40px;
-        }
-
-        .about-section .about-content {
-            max-width: 800px;
-            flex: 1;
-        }
-
-        .about-section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .about-section p {
-            font-size: 1.2rem;
-            line-height: 1.5;
-            color: #333;
-        }
-
-        /* Keyframe Animations */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        /* Footer */
-        footer {
-            background-color: rgba(0, 0, 0, 0.7);
+        /* Home Section */
+        #home {
+            background: rgba(0, 31, 61, 0.7); /* Dark semi-transparent overlay to ensure readability */
             color: white;
-            padding: 20px;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Vertically center */
+            align-items: center; /* Horizontally center */
             text-align: center;
         }
 
-        footer a {
-            color: white;
-            font-weight: bold;
+        #home h2 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            overflow: hidden; /* Hide text that overflows during animation */
+            white-space: nowrap; /* Prevent the text from wrapping */
+            border-right: 3px solid #ffcc00; /* Cursor effect */
+            width: 0;
+            animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite; /* Typing effect */
+        }
+
+        @keyframes typing {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent; /* Blinking effect */
+            }
+        }
+
+        #home p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .cta-btn {
+            background-color: #ffcc00; /* Golden Yellow for Call to Action */
+            color: #001f3d;
+            padding: 10px 30px;
             text-decoration: none;
+            font-weight: 500;
+            border-radius: 5px;
         }
 
-        footer a:hover {
-            text-decoration: underline;
+        .cta-btn:hover {
+            background-color: #ffaa00;
         }
 
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .about-section {
-                flex-direction: column;
-                align-items: center;
-            }
+        /* About Section */
+        #about {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #003366; /* Darker Navy */
+        }
 
-            .about-section img {
-                margin-bottom: 20px;
-            }
+        #about h2 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
 
-            .about-section .about-content {
-                text-align: center;
-            }
+        #about p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        /* Skills Section */
+        #skills {
+            background-color: #001f3d; /* Navy Blue */
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        #skills h2 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: space-around;
+            text-align: left;
+        }
+
+        .skill {
+            width: 30%;
+            background: #003366; /* Darker Navy for skill cards */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .skill p {
+            font-size: 16px;
+        }
+
+        /* Projects Section */
+        #projects {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #001f3d; /* Navy Blue */
+        }
+
+        #projects h2 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .project-card {
+            display: inline-block;
+            width: 45%;
+            margin: 20px;
+            background: #003366; /* Darker Navy for project cards */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .project-link {
+            background-color: #ffcc00; /* Golden Yellow for Project Link */
+            color: #001f3d;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .project-link:hover {
+            background-color: #ffaa00;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #003366; /* Dark Navy */
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        #contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #contact form label {
+            font-size: 16px;
+            text-align: left;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #contact form input,
+        #contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #contact form button {
+            background-color: #ffcc00; /* Golden Yellow for button */
+            color: #001f3d;
+            padding: 10px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #contact form button:hover {
+            background-color: #ffaa00;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
+    <!-- Navbar -->
+    <div id="navbar">
         <div class="container">
-            <h1>Madhuri</h1>
+            <div class="logo">Madhuri</div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="skills.html">Skills</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <a href="resume.pdf" download>Download Resume</a>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
-    </header>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home">
+        <img src="https://img.freepik.com/free-photo/portrait-beautiful-young-woman-with-blue-eyes-brown-hair_1142-41409.jpg?t=st=1733823626~exp=1733827226~hmac=ce3e5ad714f5d46a7ee214ac6726ca127b457608ab0b6ee8f9c0a7f787a4e7d6&w=740" height="300" weight="300";
+        <h2>UI/UX Developer & Designer</h2>
+        <p>Designing for the future with creativity and innovation.</p>
+        <a href="#projects" class="cta-btn">View My Work</a>
+    </section>
 
     <!-- About Section -->
-    <section class="about-section">
-        <img src="profile.jpg" alt="Madhuri's Profile Picture">
-        <div class="about-content">
-            <h2>About Madhuri</h2>
-            <p>Hello! I'm Madhuri, a passionate UI/UX Developer with experience in creating user-centric designs that are both functional and visually appealing. I specialize in designing intuitive interfaces and seamless user experiences for web and mobile applications. I strive to continuously improve my skills and stay up-to-date with the latest trends in UI/UX design.</p>
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm Madhuri, a passionate UI/UX developer and designer with a strong focus on creating seamless and intuitive user experiences. I love solving complex problems through design and technology.
+            </p>
         </div>
     </section>
 
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <h3>UI Design</h3>
+                    <p>Expert in creating user interfaces with a focus on user experience and accessibility.</p>
+                </div>
+                <div class="skill">
+                    <h3>UX Research</h3>
+                    <p>Skilled in conducting user research to inform design decisions and improve usability.</p>
+                </div>
+                <div class="skill">
+                    <h3>Web Development</h3>
+                    <p>Proficient in HTML, CSS, JavaScript, and React to build responsive and interactive websites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400x250" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>A beautiful UI/UX design project.</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400x250" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>An interactive web app with an engaging user experience.</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="#">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
 
 </body>
 </html>
