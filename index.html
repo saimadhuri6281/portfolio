@@ -268,6 +268,86 @@
         #contact form button:hover {
             background-color: #ffaa00;
         }
+
+        /* General Styles for Portfolio Items */
+.portfolio-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.portfolio-item h3 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.portfolio-item .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.portfolio-item .buttons a,
+.portfolio-item .buttons button {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.portfolio-item .buttons a:hover,
+.portfolio-item .buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Grid */
+#portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Two cards per row */
+@media (min-width: 768px) {
+    .portfolio-item {
+        flex: 0 0 calc(50% - 30px);
+        max-width: calc(50% - 30px);
+    }
+}
+
+/* Full width on small screens */
+@media (max-width: 767px) {
+    .portfolio-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -290,8 +370,8 @@
 
     <!-- Home Section -->
     <section id="home">
-        <img src="https://img.freepik.com/free-photo/portrait-beautiful-young-woman-with-blue-eyes-brown-hair_1142-41409.jpg?t=st=1733823626~exp=1733827226~hmac=ce3e5ad714f5d46a7ee214ac6726ca127b457608ab0b6ee8f9c0a7f787a4e7d6&w=740" height="300" weight="300";
-        <h2>UI/UX Developer & Designer</h2>
+        <img src="https://img.freepik.com/free-photo/portrait-beautiful-young-woman-with-blue-eyes-brown-hair_1142-41409.jpg?t=st=1733823626~exp=1733827226~hmac=ce3e5ad714f5d46a7ee214ac6726ca127b457608ab0b6ee8f9c0a7f787a4e7d6&w=740" height="300" weight="300";>
+        <h1>UI/UX Developer & Designer</h1>
         <p>Designing for the future with creativity and innovation.</p>
         <a href="#projects" class="cta-btn">View My Work</a>
     </section>
@@ -326,26 +406,99 @@
             </div>
         </div>
     </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/400x250" alt="Project 1">
-                <h3>Project 1</h3>
-                <p>A beautiful UI/UX design project.</p>
-                <a href="#" class="project-link">View Project</a>
+    
+    <!-- Portfolio Section -->
+    <div class="container">
+        <h2>PORTFOLIO</h2>
+        
+        <div class="row mt-4 justify-content-center" id="portfolio-container">
+            <div class="col-md-4 portfolio-item development">
+                <img src="images/HTML.jpg" alt="Development Project 1">
+                <h3>HTML</h3>
+                <div class="buttons">
+                    <a href="https://github.com/saimadhuri6281/website.git" target="_blank">Source Code</a>
+                    <a href="https://saimadhuri6281.github.io/website/" target="_blank">Preview</a>
+                </div>
             </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/400x250" alt="Project 2">
-                <h3>Project 2</h3>
-                <p>An interactive web app with an engaging user experience.</p>
-                <a href="#" class="project-link">View Project</a>
+
+            <div class="col-md-4 portfolio-item development">
+                <img src="images/Java.jpg" alt="Development Project 2">
+                <h3>Java Script</h3>
+                <div class="buttons">
+                    <a href="https://github.com/saimadhuri6281/javawork.git" target="_blank">Source Code</a>
+                    <a href="https://saimadhuri6281.github.io/javawork/" target="_blank">Preview</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 portfolio-item development">
+                <img src="images/rjs.png" alt="Development Project 3">
+                <h3>React JS</h3>
+                <div class="buttons">
+                    <a href="https://github.com/saimadhuri6281/reactrepo.git" target="_blank">Source Code</a>
+                    <a href="https://saimadhuri6281.github.io/reactrepo/" target="_blank">Preview</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 portfolio-item development">
+                <img src="images/WP1.jpg" alt="Development Project 4">
+                <h3> WordPress Static</h3>
+                <div class="buttons">
+                    <a href="https://dev-nutrition123.pantheonsite.io/" target="_blank">Preview</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 portfolio-item development">
+                <img src="images/WP2.jpg" alt="Development Project 5">
+                <h3> WordPress Dynamic</h3>
+                <div class="buttons">
+                    <a href="https://dev-visit-here.pantheonsite.io/" target="_blank">Preview</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 portfolio-item design">
+                <img src="images/flyer1.jpg" alt="Design Project 1" data-toggle="modal" data-target="#imageModal1">
+                <h3>FLYER 1</h3>
+            </div>
+            
+            <div class="col-md-4 portfolio-item design">
+                <img src="images/FLYER2.jpg" alt="Design Project 2" data-toggle="modal" data-target="#imageModal2">
+                <h3>FLYER 2</h3>
+            </div>
+            
+            
+            <div class="col-md-4 portfolio-item design">
+                <img src="images/poster1.jpg" alt="Design Project 3" data-toggle="modal" data-target="#imageModal3">
+                <h3>POSTER 1</h3>
+            </div>
+            
+            <div class="col-md-4 portfolio-item design">
+                <img src="images/poster2.jpg" alt="Design Project 3" data-toggle="modal" data-target="#imageModal3">
+                <h3>POSTER 2</h3>
+            </div>
+
+          
+            
+            <div class="col-md-4 portfolio-item figma">
+                <img src="images/fig1.jpg" alt="Figma Project 1">
+                <h3>Figma Mobile App</h3>
+                <div class="buttons">
+                    <a href="https://www.figma.com/proto/3NbMBis9apYVJkX3EeWWTs/Untitled?t=aZ2bOzORM9TQNbaG-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=87-39&starting-point-node-id=87%3A39&show-proto-sidebar=1" target="_blank">Preview</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 portfolio-item figma">
+                <img src="images/fig2.jpg" alt="Figma Project 1">
+                <h3>Figma Web App</h3>
+                <div class="buttons">
+                    <a href="https://www.figma.com/proto/okCe9oZRrSnHlgOJGuD7hz/Untitled?t=QH1MJ02tPIjSh5qe-1&scaling=contain&content-scaling=fixed&page-id=0%3A1&node-id=34-606&starting-point-node-id=34%3A606" target="_blank">Preview</a>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
+      <!-- Portfolio Section -->
+
+   
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
